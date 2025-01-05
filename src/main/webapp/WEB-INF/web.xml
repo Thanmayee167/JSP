@@ -8,4 +8,21 @@
             30
         </session-timeout>
     </session-config>
+    <!-- Servlet configuration -->
+    <servlet>
+        <servlet-name>JSPInitParamServlet</servlet-name>
+        <jsp-file>implicitObjectsExample.jsp</jsp-file>
+
+        <!-- Initialization Parameter -->
+        <init-param>
+            <param-name>appName</param-name>
+            <param-value>My JSP app</param-value>
+        </init-param>
+    </servlet>
+
+    <!-- Map the servlet to the JSP page -->
+    <servlet-mapping>
+        <servlet-name>JSPInitParamServlet</servlet-name>
+        <url-pattern>/implicitObjectsExample.jsp</url-pattern>
+    </servlet-mapping>
 </web-app>
