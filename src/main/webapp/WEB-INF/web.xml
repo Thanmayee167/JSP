@@ -25,4 +25,8 @@
         <servlet-name>JSPInitParamServlet</servlet-name>
         <url-pattern>/implicitObjectsExample.jsp</url-pattern>
     </servlet-mapping>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/errorPage.jsp</location>
+    </error-page>
 </web-app>
