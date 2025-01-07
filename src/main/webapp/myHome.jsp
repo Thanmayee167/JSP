@@ -11,6 +11,7 @@
     </head>
     <body>
         <%
+            response.addHeader("Cache-Control", "no-chache, no-store, must-revalidate");
             if (session.getAttribute("username") == null)
                 response.sendRedirect("login.jsp");
         %>

@@ -10,6 +10,9 @@
         <title>Error Page</title>
     </head>
     <body>
+        <%
+            response.addHeader("Cache-Control", "no-chache, no-store, must-revalidate");
+        %>
         <h1>Login Failed</h1>
         <p>Invalid username or password. Please try again.</p>
         <a href="login.jsp">Back to Login</a>

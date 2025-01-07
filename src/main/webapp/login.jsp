@@ -10,6 +10,9 @@
         <title>Login Page</title>
     </head>
     <body>
+        <%
+            response.addHeader("Cache-Control", "no-chache, no-store, must-revalidate");
+        %>
         <h1>Login</h1>
         <form action="login" method="post">
             <label for="username">Username:</label>
