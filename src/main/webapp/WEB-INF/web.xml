@@ -20,7 +20,17 @@
             <param-value>My JSP app</param-value>
         </init-param>
     </servlet>
-    
+
+    <!-- Map the servlet to the JSP page -->
+    <servlet-mapping>
+        <servlet-name>JSPInitParamServlet</servlet-name>
+        <url-pattern>/implicitObjectsExample.jsp</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/errorPage.jsp</location>
+    </error-page>
+
     <!-- WelcomeServlet configuration -->
     <servlet>
         <servlet-name>WelcomeServlet</servlet-name>
@@ -40,14 +50,4 @@
         <filter-name>LoggingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-    <!-- Map the servlet to the JSP page -->
-    <servlet-mapping>
-        <servlet-name>JSPInitParamServlet</servlet-name>
-        <url-pattern>/implicitObjectsExample.jsp</url-pattern>
-    </servlet-mapping>
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/errorPage.jsp</location>
-    </error-page>
 </web-app>
